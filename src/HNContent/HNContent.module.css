@@ -1,0 +1,38 @@
+.entry {
+    display: grid;
+    grid-template-columns: 0.8fr 11fr 1.5fr;
+    margin: 7px 0px;
+    font-size: 1.2em;
+}
+
+.entry > div > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+input[type=text] {
+    font-size: 1em;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
