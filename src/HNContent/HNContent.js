@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import Moment from 'react-moment';
-
+import HNElement from './HNElement/HNElement';
 import styles from './HNContent.module.css';
 
 const API = 'http://hn.algolia.com/api/v1/search?query=';
@@ -61,14 +60,14 @@ export default class HNContent extends Component {
             // Its done loading
             loader = <div></div>;
 
-            console.log(this.state.hits)
-
-            entries = this.state.hits.map((hit) => 
-                <div key={hit.objectID} className={styles.entry}>
-                    <div>{hit.points}</div>
-                    <div><a target="_blank" rel="noreferrer noopener" href={hit.url}>{hit.title}</a></div>
-                    <div><Moment fromNow>{hit.created_at}</Moment></div>
-                </div>
+            entries = this.state.hits.map((hit) =>
+                <HNElement 
+                    id={hit.objectID} 
+                    points={hit.points} 
+                    url={hit.url}
+                    title={hit.title}
+                    created_at={hit} 
+                />
             );
         }
 

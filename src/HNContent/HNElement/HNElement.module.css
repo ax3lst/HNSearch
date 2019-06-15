@@ -1,0 +1,12 @@
+.entry {
+    display: grid;
+    grid-template-columns: 0.8fr 11fr 1.5fr;
+    margin: 7px 0px;
+    font-size: 1.2em;
+}
+
+.entry > div > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3e3e3e;
+}
